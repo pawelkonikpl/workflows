@@ -9,12 +9,14 @@ on:
     branches:
       - main
 
+
+
 jobs:
   checkout:
-
+    environment:
+      name: production
+      url: https://github.com
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
-    env:
-      name: "aaaaa"
     with:
       tag: "123123123"
 
