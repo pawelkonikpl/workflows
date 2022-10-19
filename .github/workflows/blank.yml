@@ -9,10 +9,11 @@ on:
     branches:
       - main
 
-
-
 jobs:
   checkout:
+    strategy:
+      matrix:
+        target: [ production, dev, test ]
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
       tag: "123123123"
