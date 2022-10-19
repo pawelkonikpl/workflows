@@ -10,13 +10,7 @@ on:
       - main
 
 jobs:
-  checkout:
-    strategy:
-      matrix:
-        target: [ production, dev, test ]
-    uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
-    with:
-      tag: "123123123"
+
 
   another-build:
     runs-on: ubuntu-latest
@@ -29,3 +23,8 @@ jobs:
       - name: Another cool step
         run: |
           echo "Test"
+
+  checkout:
+    uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
+    with:
+      tag: "123123123"
