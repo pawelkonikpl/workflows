@@ -9,9 +9,9 @@ on:
 
 jobs:
   checkout:
-    uses: org/repo/.github/workflows/build.yml@main
+    uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
-      jdk_version: 11
+      tag: "123123123"
 
     
 
