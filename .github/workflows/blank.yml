@@ -5,14 +5,18 @@ name: CI
 # Controls when the workflow will run
 on:
   workflow_dispatch:
-
+  push:
+    branches:
+      - master
 
 jobs:
   checkout:
-    uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
-    with:
-      tag: "123123123"
+    steps:
+      - name: Base action
+        uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
+        with:
+          tag: "123123123"
 
-    
+
 
 
