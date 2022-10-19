@@ -16,7 +16,6 @@ jobs:
     environment:
       name: production
       url: https://github.com
-    needs: checkout
 
     steps:
       - name: Another cool step
@@ -24,6 +23,7 @@ jobs:
           echo "Test"
 
   checkout:
+    needs: another-build
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
       tag: "123123123"
