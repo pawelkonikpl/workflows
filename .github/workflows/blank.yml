@@ -10,7 +10,7 @@ on:
       - master
 
 jobs:
-  deploy-to-dev:
+  checkout:
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
       tag: "123123123"
