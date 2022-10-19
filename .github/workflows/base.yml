@@ -9,6 +9,9 @@ on:
         required: true
         type: string
 
+env:
+  IMAGE_NAME: "my-image-name"
+
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -19,5 +22,5 @@ jobs:
         run: |
           echo 123
           echo "${{inputs.tag}}"
-          echo "Test ${{env.name}}"
+          echo "Test ${{env.IMAGE_NAME}}"
 
