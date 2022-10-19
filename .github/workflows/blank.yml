@@ -10,12 +10,11 @@ on:
       - master
 
 jobs:
-  checkout:
-    steps:
-      - name: Base action
-        uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
-        with:
-          tag: "123123123"
+  deploy-to-dev:
+    - name: Base action
+      uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
+      with:
+        tag: "123123123"
 
 
 
