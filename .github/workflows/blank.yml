@@ -10,9 +10,6 @@ on:
       - main
 
 
-environment:
-  name: production
-  url: https://github.com
 
 jobs:
   checkout:
@@ -22,6 +19,9 @@ jobs:
 
   another-build:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://github.com
     needs: checkout
 
     steps:
