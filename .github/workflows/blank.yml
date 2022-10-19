@@ -11,15 +11,17 @@ on:
 
 jobs:
   checkout:
-    
+
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
+    env:
+      name: "aaaaa"
     with:
       tag: "123123123"
-  
+
   another-build:
     runs-on: ubuntu-latest
     needs: checkout
-    
+
     steps:
       - name: Another cool step
         run: |

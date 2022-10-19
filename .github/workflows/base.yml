@@ -8,13 +8,6 @@ on:
       tag:
         required: true
         type: string
-    environment:
-      name:
-        required: true
-        type: string
-      url:
-        required: true
-        type: string
 
 jobs:
   # This workflow contains a single job called "build"
@@ -26,4 +19,5 @@ jobs:
         run: |
           echo 123
           echo "${{inputs.tag}}"
+          echo "Test ${{env.name}}"
 
