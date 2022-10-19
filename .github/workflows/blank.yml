@@ -10,13 +10,13 @@ on:
       - main
 
 
+environment:
+  name: production
+  url: https://github.com
 
 jobs:
   checkout:
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
-    environment:
-      name: production
-      url: https://github.com
     with:
       tag: "123123123"
 
