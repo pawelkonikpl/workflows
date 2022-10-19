@@ -23,4 +23,5 @@ jobs:
           echo 123
           echo "${{inputs.tag}}"
           echo "Test ${{env.IMAGE_NAME}}"
+          echo "TOKEN: ${{ secrets.GITHUB_TOKEN }}"
 
