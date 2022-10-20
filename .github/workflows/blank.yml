@@ -30,4 +30,4 @@ jobs:
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
       tag: ${{env.IMAGE_NAME}}
-      image: ${{$IMAGE_TAG}}
+      image: ${{env.IMAGE_TAG}}
