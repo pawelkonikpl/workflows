@@ -10,7 +10,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: "test"
+  IMAGE_NAME: "test1112222"
 
 jobs:
 
@@ -30,4 +30,4 @@ jobs:
     needs: another-build
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
-      tag: "123123123"
+      tag: $IMAGE_NAME
