@@ -9,6 +9,10 @@ on:
         required: true
         type: string
 
+      image:
+        required: true
+        type: string
+
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -17,7 +21,5 @@ jobs:
     steps:
       - name: Test name
         run: |
-          echo 123
-          echo "${{inputs.tag}}"
-          echo "TOKEN: ${{ secrets.GITHUB_TOKEN }}"
+          docker build . --tag "${{ inputs.image}}:${{ inputs.tag}}"
 
