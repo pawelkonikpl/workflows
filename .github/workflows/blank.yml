@@ -29,5 +29,5 @@ jobs:
     needs: another-build
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
-      tag: $IMAGE_NAME
-      image: $IMAGE_TAG
+      tag: ${{env.IMAGE_NAME}}
+      image: ${{$IMAGE_TAG}}
