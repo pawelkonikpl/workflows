@@ -10,7 +10,8 @@ on:
       - main
 
 env:
-  IMAGE_NAME: "test1112222"
+  IMAGE_NAME: "test"
+  IMAGE_TAG: "123"
 
 jobs:
 
@@ -22,12 +23,11 @@ jobs:
 
     steps:
       - name: Another cool step
-        run: |
-          echo "Test"
-          echo $IMAGE_NAME
+        run: echo 123
 
   checkout:
     needs: another-build
     uses: pawelkonikpl/workflows/.github/workflows/base.yml@main
     with:
       tag: $IMAGE_NAME
+      image: $IMAGE_TAG
