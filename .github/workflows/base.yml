@@ -28,4 +28,4 @@ jobs:
 
       - uses: docker/build-push-action@v3.2.0
         with:
-          tags: ${{inputs.image}}:${{inputs.tag}}
+          tags: ${{inputs.image}}:${{inputs.tag}}-${{github.run_id}}
