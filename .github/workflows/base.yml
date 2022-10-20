@@ -15,11 +15,15 @@ on:
 
 jobs:
   # This workflow contains a single job called "build"
+  
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     steps:
-      - name: Test name
-        run: |
-          docker build . --tag format('{0}:{1}', ${{ inputs.image}}, ${{ inputs.tag}})
+      - name: test
+        run: echo format('{0}:{1}', ${{ inputs.image}}, ${{ inputs.tag}})
+      
+#       - name: Test name
+#         run: |
+#           docker build . --tag format('{0}:{1}', ${{ inputs.image}}, ${{ inputs.tag}})
 
