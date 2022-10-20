@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Another cool step
-        run: echo 123
+        run: echo ${{github.build_id}}
 
   checkout:
     needs: another-build
