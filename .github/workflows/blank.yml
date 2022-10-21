@@ -31,3 +31,13 @@ jobs:
     with:
       tag: "test"
       image: "123"
+      
+  checkout1: 
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@master
+        with:
+          name: pawelkonikpl/guix     
+          ref: refs/heads/release
+  
