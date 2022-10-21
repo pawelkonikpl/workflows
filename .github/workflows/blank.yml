@@ -40,4 +40,13 @@ jobs:
         with:
           name: pawelkonikpl/guix     
           ref: ${{ github.event.pull_request.head.sha }}
+          
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.5.1
+      
+      - name: Install npm
+        run: yarn install
+        
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
   
