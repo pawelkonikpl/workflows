@@ -36,10 +36,9 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2.5.0
         with:
           name: pawelkonikpl/guix     
-          ref: ${{ github.event.pull_request.head.sha }}
           
       - name: Print
         run: ls -la
