@@ -39,5 +39,5 @@ jobs:
       - uses: actions/checkout@master
         with:
           name: pawelkonikpl/guix     
-          ref: refs/heads/release
+          ref: ${{ github.event.pull_request.head.sha }}
   
